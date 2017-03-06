@@ -1,0 +1,7 @@
+lessthan5 = filter student by grade<5.0;
+
+lessthan5group = group lessthan5 all;
+
+lessthan5result = foreach lessthan5group generate group, COUNT(lessthan5);
+
+dump lessthan5result;
